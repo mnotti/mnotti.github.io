@@ -1,0 +1,27 @@
+body {
+  background-image: url(images/meAndTheOcean.jpg);
+  
+  background-position: center center;
+  
+  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
+  
+  //rescales based on screen size
+  background-size: cover;
+    
+    font-family: sans-serif;
+}
+
+.dots {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    /*background-color:rgba(0,0,0,0.1);*/
+}
+
+#contact-info {
+    font-size: 18px;
+    color: #0F2145;
+}
