@@ -16,21 +16,27 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
     </head>
-<body onmousemove="moveDots(event);">
-	<canvas class="dots" id="dots" width="700" height="350">
-	</canvas>
-    <p id="demo"></p>
+<body>
+    <div id="Name" class="container-fluid">
+        <div class="col-xs-12" style="height:100px;"></div>
+     
+        <div class="col-md-6 text-center"><canvas onmousemove="canvas1.moveDots(event);" id="FirstName"></canvas></div>
+        <div class="col-md-6 text-center"><canvas onmousemove="canvas2.moveDots(event);" id="LastName"></canvas></div>
+    </div>
     <div id="contact-info" class="container-fluid">
-        <div class="col-md-6 text-center">
+        <div class="col-xs-12" style="height:100px;"></div>
+
+        <div class="col-md-12 text-center">
             <div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
 				<p>markusnotti@gmail.com</a></p>
         </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-12 text-center">
             <div class="point-icon"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></div>
 				<p>925-330-2530</p>
         </div>
     </div>
 </body>
     <script src="src/dots.js"></script>
+    <script src="src/index.js"></script>
 
 </html>

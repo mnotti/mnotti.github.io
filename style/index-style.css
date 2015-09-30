@@ -13,15 +13,26 @@ body {
     font-family: sans-serif;
 }
 
-.dots {
-    padding: 0;
-    margin: auto;
+
+#FirstName {
+    margin:0 auto;
     display: block;
-    width: 800px;
-    /*background-color:rgba(0,0,0,0.1);*/
+    
+    width:420px;
+    height:120px;
 }
+
+#LastName {
+    margin:0 auto;
+    display: block;
+    
+    width:320px;
+    height:120px;
+}
+
 
 #contact-info {
     font-size: 18px;
     color: #0F2145;
 }
+
