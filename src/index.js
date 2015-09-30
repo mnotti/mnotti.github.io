@@ -1,6 +1,6 @@
 var canvas1 = new Dots("FirstName");
 
-var startLeft = 20, startTop = 0, countx = startLeft, county = startTop;
+var startLeft = 20, startTop = 20, countx = startLeft, county = startTop;
 
     //letter M
     county = canvas1.dots_drawStraightLine(countx, county, countx, county + 100);
@@ -75,7 +75,7 @@ var startLeft = 20, startTop = 0, countx = startLeft, county = startTop;
 var canvas2 = new Dots("LastName");
 
 startLeft = 20; 
-startTop = 0;
+startTop = 20;
 countx = startLeft;
 county = startTop;
 
