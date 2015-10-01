@@ -17,12 +17,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
     </head>
-<body>
+<body onmousemove="canvas1.moveDots(event); canvas2.moveDots(event);">
     <div id="Name" class="container-fluid">
         <div class="col-xs-12" style="height:100px;"></div>
      
-        <div class="col-md-6 text-center"><canvas onmousemove="canvas1.moveDots(event);" id="FirstName"></canvas></div>
-        <div class="col-md-6 text-center"><canvas onmousemove="canvas2.moveDots(event);" id="LastName"></canvas></div>
+        <div class="col-md-6 text-center"><canvas id="FirstName"></canvas></div>
+        <div class="col-md-6 text-center"><canvas id="LastName"></canvas></div>
     </div>
     <div id="contact-info" class="container-fluid">
         <div class="col-xs-12" style="height:100px;"></div>
