@@ -13,6 +13,9 @@ var Dots = function (id) {
     var dotsYOG = [];
     
     var color = "white";
+    var dispersion_diameter = 40;
+    
+    var mouseCoords = [2];
     
     var clearCanvas = function () {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -52,21 +55,24 @@ var Dots = function (id) {
         var dotsxl = dotsX.length;
         for (var i = 0; i < dotsxl; i++) {
             var radius = distAndDirBetween(dotsX[i], dotsY[i], dotsXOG[i], dotsYOG[i]);
-            if(radius[0] > 1) {
-                        dotsX[i] += Math.cos(radius[1]);
-                        dotsY[i] += Math.sin(radius[1]);
-            }
-            if(radius[0] > 0.5) {
-                        dotsX[i] += 0.5 * Math.cos(radius[1]);
-                        dotsY[i] += 0.5 * Math.sin(radius[1]);
-            }
-            if(radius[0] > 0.2) {
-                        dotsX[i] += 0.2 * Math.cos(radius[1]);
-                        dotsY[i] += 0.2 * Math.sin(radius[1]);
-            }
-            if(radius[0] > 0.1) {
-                        dotsX[i] += 0.1 * Math.cos(radius[1]);
-                        dotsY[i] += 0.1 * Math.sin(radius[1]);
+            var distance = distAndDirBetween(dotsX[i], dotsY[i], mouseCoords[0], mouseCoords[1])
+            if (distance[0] > dispersion_diameter/2) {
+                if(radius[0] > 1) {
+                            dotsX[i] += Math.cos(radius[1]);
+                            dotsY[i] += Math.sin(radius[1]);
+                }
+                if(radius[0] > 0.5) {
+                            dotsX[i] += 0.5 * Math.cos(radius[1]);
+                            dotsY[i] += 0.5 * Math.sin(radius[1]);
+                }
+                if(radius[0] > 0.2) {
+                            dotsX[i] += 0.2 * Math.cos(radius[1]);
+                            dotsY[i] += 0.2 * Math.sin(radius[1]);
+                }
+                if(radius[0] > 0.1) {
+                            dotsX[i] += 0.1 * Math.cos(radius[1]);
+                            dotsY[i] += 0.1 * Math.sin(radius[1]);
+                }
             }
         }
 
@@ -195,10 +201,13 @@ var Dots = function (id) {
     }
         
     this.moveDots = function(event) {
+        var coords = getCursorCoords(event);
+        mouseCoords = coords;
+        
         var dotsxl = dotsX.length;
         for (var i = 0; i < dotsxl; i++) {
-            var distance = distAndDirFromCursor(dotsX[i], dotsY[i], event);
-            if (distance[0] < 50 && distance[0] > 5) {
+            var distance = distAndDirBetween(dotsX[i], dotsY[i], mouseCoords[0], mouseCoords[1]);
+            if (distance[0] < dispersion_diameter/2) {
 
                 dotsX[i] -= 2 * Math.cos(distance[1]);
                 dotsY[i] -= 2 * Math.sin(distance[1]);
@@ -735,7 +744,8 @@ var Dots = function (id) {
     }
     
     this.writeWord = function (word, x, y, width, height, spacing, fontColor) {
-        color = fontColor;
+        color = fontColor;3
+        dispersion_diameter = width;
         var len = word.length;
         var ret = [x,y];
         for (var i = 0; i < len; i++) {
