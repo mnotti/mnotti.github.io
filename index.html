@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
 	<head>
+        <!--CSS-->
 		<link rel="stylesheet" type="text/css" href="style/index-style.css">
+        <link rel="stylesheet" type="text/css" href="style/nav-effect.css">
+        <link rel="stylesheet" type="text/css" href="style/to-top-button.css">
+
         <title>Markus Notti | UCLA</title>
         <link rel="shortcut icon" href="mn-2.ico">
         <link rel="shortcut icon" href="mn-2.ico" type="image/x-icon" />
@@ -18,26 +22,128 @@
 	
     </head>
 <body onmousemove="canvas1.moveDots(event); canvas2.moveDots(event);">
+    <!-- Scroll to Top Button -->
+        <div>
+            <a href="#nav-bar" id="topDivButton" class="topDivButton btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span> To Top</a>
+        </div>
+    <div id="cover-image" >
+        <nav class="cl-effect-1 container-fluid">
+                <div id="nav-bar" class="nav1">
+                    <div class="col-sm-3 text-center"><a href="#about">About Me</a></div>
+                    <div class="col-sm-3 text-center"><a href="#work">Work Experience</a></div>
+                    <div class="col-sm-3 text-center"><a href="#projects">Projects</a></div>
+                    <div class="col-sm-3 text-center"><a href="#contact">Contact</a></div>
+                </div>
+        </nav>
     <div id="Name" class="container-fluid">
         <div class="col-xs-12" style="height:100px;"></div>
      
         <div class="col-md-6 text-center"><canvas id="FirstName"></canvas></div>
         <div class="col-md-6 text-center"><canvas id="LastName"></canvas></div>
     </div>
-    <div id="contact-info" class="container-fluid">
-        <div class="col-xs-12" style="height:100px;"></div>
-
-        <div class="col-md-12 text-center">
-            <div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
-				<p>markusnotti@gmail.com</a></p>
-        </div>
-                <div class="col-md-12 text-center">
-            <div class="point-icon"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></div>
-				<p>925-330-2530</p>
-        </div>
     </div>
+    <div id="main-content">
+       <div id="about">
+           <h3>A Little About Me</h3>
+            <p>Hi, I'm Markus Notti. I was born and raised in Walnut Creek California, attended De La Salle High School in Concord, CA, and now I'm a third year here at UCLA pursuing a BS in Computer Science and Engineering.<br><br>  I'm interested in all things software and have dabbled in quite a bit. From creating my own Javascript library to integrating static analysis tools into the CI/CD pipeline to messing around with creating autonomously balancing quadcopters, I've dipped my feet into quite a few pools, because I love to learn, and I'm always looking for a new adventure.  <br><br>So feel free to explore my site! Be sure to check out my work experiences and some of the projects I've been working on. This site is still a little bit of a work in progress, so more info to come, but for now, you can see some of my highlights. (And also make sure you mouse over my name at the top of the page...at least I think it's pretty cool) </p>
+        </div> 
+        <div id="work">
+            <br>
+           <h3>Work Experience</h3>
+            <p>
+                <ul>
+                    <li><strong>Viasat Inc.</strong>&nbsp&nbsp&nbsp&nbsp<i>Software Engineering Intern</i> &nbsp&nbsp&nbsp&nbsp(June 2015 - Sept. 2015)</li>
+                    <ul>
+                        <li>Designed, documented, developed, deployed, and tested a REST API and web application using the MEAN stack for presenting key performance indicators (KPI’s) in the continuous integration and delivery of eight software components in four artifact repositories; Learned about CI/CD (Continuous Integration/Continuous Delivery) and used various node.js packages</li>
+                        <li>Created a web scraper tool to expedite the downloading of sensitive data using Python and Selenium</li>
+                        <li>Worked with Jenkins, Coverity, Fortify, Klocwork, Cppcheck, and Clang to conduct a static analysis tool trade study to decide which tool to integrate into Viasat’s CI/CD pipeline</li>
+                    </ul>
+                    <br>
+                    <li><strong>Electron Losses and Fields Investigation</strong>&nbsp&nbsp&nbsp&nbsp<i>Software/Test Engineer</i> &nbsp&nbsp&nbsp&nbsp(May 2014 - June 2015)</li>
+                    <ul>
+                        <li>Charged with controlling the orientation of the satellite in space through its spin rate and direction</li>
+                        <li>Derived a precession control law used in the simulation of the satellite’s orbit</li>
+                        <li>Created a LabView program to simulate the satellite’s magnetometer data</li>
+                    </ul>
+                    <br>
+                        <li><strong>UCLA Anderson School of Business</strong>&nbsp&nbsp&nbsp&nbsp<i>Student Technician</i> &nbsp&nbsp&nbsp&nbsp(Feb. 2015 - Sept. 2015)</li>
+                    <ul>
+                        <li>Charged with troubleshooting technical hardware and software related issues for graduate students and faculty at the UCLA Anderson School of Business</li>
+                        <li>Configured Laptops, Imaged/Re-imaged desktops</li>
+                        <li>Dealt with Windows, MacOS, and Linux</li>
+                    </ul>
+                    
+                </ul>
+            </p>
+        </div> 
+         <div id="projects">
+             <br>
+           <h3>Projects</h3>
+            <p>
+                <ul>
+                    <li><strong>Javascript Animated Font</strong></li>
+                    <ul>
+                        <li>Created my own developer friendly animated font using Javascript</li>
+                        <li>When a viewer mouses over the font, the words break up into dots and fly away only to realign themselves perfectly when the mouse moves away</li>
+                        <li>Developer can input font size, color, and opacity</li>
+
+                    </ul>
+                    <br>
+                    <li><strong>X1 Robotics</strong></li>
+                    <ul>
+                        <li>Together with a few other engineers, I recently co-founded the club X1 Robotics at UCLA</li>
+                        <li>Currently working on establishing ourselves as an organization and will be applying for funding soon</li>
+                        <li>The first project we are undertaking is building and programming an autonomously stabilizing quadcopter using a Raspberry Pi and an Arduino Mega</li>
+                        <li>The quadcopter will be controlled via an iPhone application which I have already created and will respond in real time to user commands as well as make calculations to stablize itself in flight</li>
+
+                    </ul>
+                    <br>
+                    <li><strong>iOS Application Development</strong></li>
+                    <ul>
+                        <li>Worked with both Swift and Objective C to design and implement some small mini games using the Spritekit Framework</li>
+                        <li>Currently developing an application which pits friends against friends in a socially competitive environment...more details to come when it gets to the app store </li>
+
+                    </ul>
+                    <br>
+                </ul>
+             </p>
+        </div> 
+        <div id="contact">
+		<div class="contact-grids">
+			<div class="col-md-6 contact-grid text-center">
+				<div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
+				<p><a href="mailto:markusnotti@gmail.com">markusnotti@gmail.com</a></p>
+			</div>
+			<div class="col-md-6 contact-grid text-center">
+				<div class="point-icon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></div>
+				<p>(925)-330-2530</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+        </div>
+    
+    </div>
+	<div id="footer" class="container-fluid">
+        <!--spacing-->
+        <div class="col-xs-12" style="height:20px;"></div>
+        <!--spacing--> 
+        <div class="col-md-12 contact-grid text-center">
+
+		<p> &copy; Design by Markus Notti</p>
+            
+        </div>
+                <!--spacing-->
+        <div class="col-xs-12" style="height:15px;"></div>
+        <!--spacing--> 
+	</div>
+    
+    
 </body>
+
     <script src="src/dots.js"></script>
     <script src="src/index.js"></script>
+    <script src="src/resize-cover.js"></script>
+    <script src="src/top-div-button.js"></script>
+    <script src="src/smooth-scroll.js"></script>
 
 </html>

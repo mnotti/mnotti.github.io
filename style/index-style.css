@@ -1,4 +1,10 @@
 body {
+  font-family: sans-serif;
+}
+
+#cover-image {
+    
+  height:100%;
   background-image: url(images/meAndTheOcean.jpg);
   
   background-position: center center;
@@ -9,10 +15,28 @@ body {
   
   //rescales based on screen size
   background-size: cover;
-    
-    font-family: sans-serif;
 }
 
+/*nav bar up top*/
+.nav1 {
+    position: absolute;
+    top:5px;
+    z-index:3;
+    width:100%;
+    background-color: transparent;
+    list-style: none;
+    
+    font-weight: 400;
+    font-size:18px;
+    opacity:1;
+}
+
+.nav1 li {
+    display: inline;
+    font-weight: 400;
+    font-size:18px;
+    opacity:1;
+}
 
 #FirstName {
     margin:0 auto;
@@ -30,9 +54,31 @@ body {
     height:140px;
 }
 
+#main-content {
+  background-color: white;
+  margin: 20px 20px 20px 20px;
+    
+}
+
+#main-content p{
+  margin-left: 20px;
+}
+
+#main-content h3{
+  color: #144D7A;
+  text-align: center;
+}
+#about {
+  background-color: white;   
+}
 
 #contact-info {
     font-size: 18px;
     color: #0F2145;
+}
+
+#footer{
+    background-color: #144D7A;
+    color: white;
 }
 
