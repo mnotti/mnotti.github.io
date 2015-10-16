@@ -744,7 +744,7 @@ var Dots = function (id) {
     }
     
     this.writeWord = function (word, x, y, width, height, spacing, fontColor) {
-        color = fontColor;3
+        color = fontColor;
         dispersion_diameter = width;
         var len = word.length;
         var ret = [x,y];
