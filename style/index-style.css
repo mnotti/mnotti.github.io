@@ -13,8 +13,6 @@ body {
   
   background-attachment: fixed;
   
-  //rescales based on screen size
-  background-size: cover;
 }
 
 /*nav bar up top*/
