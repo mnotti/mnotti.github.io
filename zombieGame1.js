@@ -216,6 +216,15 @@ function gameOver(){
 
 //make requestAnimationFrame compatible with other browsers
 var w = window;
+
+//prevents the window from scrolling on arrow keys and spacebar
+w.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
 var then = Date.now();
