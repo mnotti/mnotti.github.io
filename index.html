@@ -25,7 +25,7 @@
         <div>
             <a href="#nav-bar" id="topDivButton" class="topDivButton btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span> To Top</a>
         </div>
-    <div id="cover-image" >
+    <div onMousemove="getDetails(this)" id="cover-image" >
         <nav class="cl-effect-1 container-fluid">
                 <div id="nav-bar" class="nav1">
                     <div class="col-sm-3 text-center"><a href="#about">About Me</a></div>
@@ -44,7 +44,7 @@
     <div id="main-content">
        <div id="about">
            <h3>A Little About Me</h3>
-            <p>Hi, I'm Markus Notti. I was born and raised in Walnut Creek California, attended De La Salle High School in Concord, CA, and now I'm a third year here at UCLA pursuing a BS in Computer Science and Engineering.<br><br>  I'm interested in all things software and have dabbled in quite a bit. From creating my own Javascript library to integrating static analysis tools into the CI/CD pipeline to messing around with creating autonomously balancing quadcopters, I've dipped my feet into quite a few pools, because I love to learn, and I'm always looking for a new adventure.  <br><br>So feel free to explore my site! Be sure to check out my work experiences and some of the projects I've been working on. This site is still a little bit of a work in progress, so more info to come, but for now, you can see some of my highlights. (And also make sure you mouse over my name at the top of the page...at least I think it's pretty cool) </p>
+            <p>Hi, I'm Markus Notti. I was born and raised in Walnut Creek California, attended De La Salle High School in Concord, CA, and now I'm a third year here at UCLA pursuing a BS in Computer Science.<br><br>  I'm interested in all things software and have dabbled in quite a bit. From creating my own Javascript library to integrating static analysis tools into the CI/CD pipeline to messing around with creating autonomously balancing quadcopters, I've dipped my feet into quite a few pools, because I love to learn, and I'm always looking for a new adventure.  <br><br>So feel free to explore my site! Be sure to check out my work experiences and some of the projects I've been working on. This site is still a little bit of a work in progress, so more info to come, but for now, you can see some of my highlights. (And also make sure you mouse over my name at the top of the page...at least I think it's pretty cool) </p>
         </div> 
         <div id="work">
             <br>
@@ -109,6 +109,9 @@
                     <ul>
                         <li>Worked with both Swift and Objective C to design and implement some small mini games using the Spritekit Framework</li>
                         <li>Currently developing an application which pits friends against friends in a socially competitive environment...more details to come when it gets to the app store </li>
+                        <li>Created entirely from scratch a 2D iOS mini game using Swift and SpriteKit</li>
+                        <li>Published on the iOS App Store</li>
+                        <a href="https://geo.itunes.apple.com/us/app/squirlz/id1059271552?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
 
                     </ul>
                     <br>
@@ -152,5 +155,6 @@
     <script src="src/resize-cover.js"></script>
     <script src="src/top-div-button.js"></script>
     <script src="src/smooth-scroll.js"></script>
+    <script src="src/mouseOverMe.js"></script>
 
 </html>
